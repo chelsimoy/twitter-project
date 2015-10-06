@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Twitter Project</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="twitter:widgets:theme" content="light">
+	<meta name="twitter:widgets:link-color" content="#55acee">
+	<meta name="twitter:widgets:border-color" content="#55acee">
+	<link rel="me" href="https://twitter.com/TwitterDev">
+	<meta name="twitter:widgets:link-color" content="#ff00ff">
+	<meta name="twitter:widgets:border-color"content="#ff00ff">
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@flickr" />
+	<meta name="twitter:title" content="Small Island Developing States Photo Submission" />
+	<meta name="twitter:description" content="View the album on Flickr." />
+	<meta name="twitter:image" content="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+	<style type="text/css" media="screen">
+	
+	body{
+		background: black;
+	}
+	
+
+	#heading{
+
+		display: inline-block;
+		position: absolute;
+		max-height: 95%;
+		min-width: 33%;
+		top: 50%;
+		margin-left: 50%;
+		margin-right: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		color: #55ACEE;
+		font-family: 'Gotham Narrow SSm','Helvetica Neue',Helvetica;
+		font-weight: 200;
+		text-align: center;
+		z-index: 1;
+	}
+
+	h1{
+		padding-top: -1em;
+		font-size: -webkit-xxx-large;
+		margin-bottom: 1px;
+		/*margin-left: auto;
+		margin-right: auto;*/
+		display: block;
+		color: #55ACEE;
+		font-family: 'Gotham Narrow SSm','Helvetica Neue',Helvetica;
+		font-weight: 200;
+	}
+
+	.fa-twitter{
+		display:inline-block;
+		font-size: 20em;
+		color: #55ACEE;
+	}
+
+	img{
+		position: absolute;
+		top: 5%;
+		margin-left: 95%;
+		margin-right: 5%;
+		-webkit-transform: translate(-95%, -5%);
+		-moz-transform: translate(-95%, -5%);
+		-ms-transform: translate(-95%, -5%);
+		-o-transform: translate(-95%, -5%);
+		transform: translate(-95%, -5%);
+		opacity: 0.6;
+
+	}
+
+	.tweets{
+		display: inline-block;
+		/*text-align: center;*/
+		max-height: 95%;
+    	min-width: 34%;
+		position: absolute;
+	  	top: 140%;
+		margin-left: 50%;
+		margin-right: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+
+	
+
+	blockquote.twitter-tweet {
+	  display: inline-block;
+	  padding: 16px;
+	  margin: 10px 0;
+	  max-width: 468px;
+	  border: #ddd 1px solid;
+	  border-top-color: #eee;
+	  border-bottom-color: #bbb;
+	  border-radius: 5px;
+	  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+		background: #fff;
+	  font: bold 14px/18px Helvetica, Arial, sans-serif;
+	  color: #000;
+	}
+
+	blockquote.twitter-tweet p {
+	  font: normal 18px/24px Georgia, "Times New Roman", Palatino, serif;
+	  margin: 0 5px 10px 0;
+	}
+
+	blockquote.twitter-tweet a[href^="https://twitter.com"] {
+	  font-weight: normal;
+	  color: #666;
+	  font-size: 12px;
+	}
+	.btn-lg{
+		color: #55ACEE;
+		z-index: 1000;
+		font-weight: 200;
+		padding: 10;
+		font-size: 15px;
+
+	}
+	
+	</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+
+		$(".pro-button").click(function(){
+
+			$(".against, .other").hide();
+			$(".pro").show();
+	
+		});
+
+		$(".against-button").click(function(){
+
+			$(".pro, .other").hide();
+			$(".against").show();
+
+		});
+
+		$(".other-button").click(function(){
+
+			$(".against, .pro").hide();
+			$(".other").show();
+	
+		});
+
+		$(".all-button").click(function(){
+			$(".pro, .against, .other").show();
+
+		});
+
+
+	});
+
+</script>
+
+</head>
+
+<body>
+	
+	<img src="white/logo_white_medium.png" height="80" width="80">
+	<div id="heading">
+		<i class="fa fa-twitter"></i>
+		<h1>#NukePlans</h1>	
+		<br>
+		<p style="font-size: 20px">We asked people to tweet their opinions of the United States' plans to modernize its nuclear arsenal.</p>
+	
+
+		<div class="btn-lg" role="group" aria-label="...">
+ 			<button type="button" class="btn btn-default btn-lg pro-button">For</button>
+  			<button type="button" class="btn btn-default btn-lg against-button">Against</button>
+  			<button type="button" class="btn btn-default btn-lg other-button">Other</button>
+  			<button type="button" class="btn btn-default btn-lg all-button">All</button>
+	    </div>
+		
+	</div>
+
+		
+
+
+	<div class="tweets">	
+	
+		<div class="against">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">I think the current nuclear weapons modernization program is unsustainable at 		projected budget levels. <a href="http://t.co/2PSbDknOCB">http://t.co/2PSbDknOCB</a> <a href="https://twitter.com/hashtag/nukeplans?src=hash">		#nukeplans</a></p>&mdash; Jeffrey Lewis (@ArmsControlWonk) <a href="https://twitter.com/ArmsControlWonk/status/625743305326759937">July 27, 2015</a>		</blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+
+		<div class="other">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">End status quo assumption-driven modernization. Better way: Objective—&gt; 		Strategy—&gt;Targets—&gt;Weapons—&gt;Force posture/numbers—&gt;Budget <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&		mdash; Stephen Schwartz (@SchwartzCNS) <a href="https://twitter.com/SchwartzCNS/status/625764338528157696">July 27, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+		<div class="other">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/ArmsControlWonk">@ArmsControlWonk</a> <a href="		https://twitter.com/SchwartzCNS">@SchwartzCNS</a> Nuclear-Armed Cruise Missiles in the Asia-Pacific <a href="https://twitter.com/hashtag/		nukeplans?src=hash">#nukeplans</a></p>&mdash; Christine M. Leah (@_Nucleah) <a href="https://twitter.com/_Nucleah/status/625771177479380992">July 		27, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="other">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Both modernization extremes--everything/nothing--are untenable. Priorities 		needed given deterrence, disarmament, financial goals. <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&mdash; James 		Acton (@james_acton32) <a href="https://twitter.com/james_acton32/status/626034516906409984">July 28, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+		<div class="other">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr">From an <a href="https://twitter.com/hashtag/allies?src=hash">#allies</a> 		perspective, the visibility of US <a href="https://twitter.com/hashtag/deterrence?src=hash">#deterrence</a> matters more than the capability used 		to do it <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&mdash; David Santoro (@DavidSantoro1) <a href="https://twitter.com/DavidSantoro1/status/625890820466413568">July 28, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+		<div class="against">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">It&#39;s not a wise or necessary investment for US to recreate entire Cold War 		nuclear triad. Smaller, reliable deterrent possible <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&mdash; Stephen 		Young (@StephenUCS) <a href="https://twitter.com/StephenUCS/status/626048525961461760">July 28, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="other">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Modernization of <a href="https://twitter.com/hashtag/nuclear?src=hash"><span id="nuclear">		</span></a> weapons is not a replacement for a strategy: <a href="https://twitter.com/hashtag/deterrence?src=hash">#deterrence</a> is a political 		phenomenon, not a technology. <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&mdash; Tom Nichols (@RadioFreeTom) <a href="https://twitter.com/RadioFreeTom/status/626067456126263296">July 28, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+		<div class="against">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Large nuclear arsenals are not worth the risk. Modernization should only be to 		avoid accidental use. Focus should be disarmament. <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&mdash; Seth Baum 		(@SethBaum) <a href="https://twitter.com/SethBaum/status/626101406798254080">July 28, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="against">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Deterrent value of legacy nukes questionable; &quot;son of Cold War triad&quot; 		modernization beholden to politics, military stakeholders <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&mdash; Gary 		Sampson (@gjsamps) <a href="https://twitter.com/gjsamps/status/626129725535055873">July 28, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="pro">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Nukes that can signal, hide, retarget, be prompt, force adversary to attack 		CONUS - the SSBN leg does it all! <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&mdash; Joshua H. Pollack 		(@Joshua_Pollack) <a href="https://twitter.com/Joshua_Pollack/status/626519982445301760">July 29, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="against">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">What&#39;s more wasteful than a &quot;modernized&quot; nuclear weapon that can never be used? $1 trillion of them. <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a> <a href="http://t.co/0UE5xSlWL4">http://t.co/0UE5xSlWL4</a></p>&mdash; John Mecklin (@meckdevil) <a href="https://twitter.com/meckdevil/status/626531091063508992">July 29, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+
+		<div class="against">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Unilateral renunciation of offensive cyberwar; intense focus on (defensive) 		cybersecurity instead. <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&mdash; Mark Gubrud (@mgubrud) <a href="https://		twitter.com/mgubrud/status/626774047666380800">July 30, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+
+		<div class="against">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Unilateral full transparency in all satellite inspection, refueling, rendezvous 		and space robotics testing &amp; ops. <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&mdash; Mark Gubrud (@mgubrud) <a 		href="https://twitter.com/mgubrud/status/626774493269069826">July 30, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+		<div class="against">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Any moment w/nuclear weapons is a WTF moment! Unless doomsday machines have a 		use I&#39;ve missed...&#10;&#10;<a href="https://twitter.com/hashtag/NukePlans?src=hash">#NukePlans</a> <a href="https://t.co/juzoacQvSq">https://<t class="		"></t>co/juzoacQvSq</a></p>&mdash; martin pfeiffer (@NuclearAnthro) <a href="https://twitter.com/NuclearAnthro/status/626559514918154241">July 30, 2015</<a href="		"></a>></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+		<div class="against">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">US <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a> are 		stuck in the Cold War. Time to cut wasteful nukes and invest in real security.</p>&mdash; Ploughshares Fund (@plough_shares) <a href="https://		twitter.com/plough_shares/status/626793193980477440">July 30, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="against">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr">Elimination or renovation of obsolete nukes is a matter of safety. Current <a 		href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a> fails to renovate while reducing. It expands.</p>&mdash; William Saetren 		(@WilliamSaetren) <a href="https://twitter.com/WilliamSaetren/status/627102868194115584">July 31, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="against">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr">US <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a> 		excessive, wasteful and out of step with the security threats we actually face.</p>&mdash; Joe Cirincione (@Cirincione) <a href="https://twitter.com/Cirincione/status/627104042267885568">July 31, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="against">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a> 		excessive, wasteful, unaffordable. Fails <a href="https://twitter.com/BarackObama">@BarackObama</a> vision for a world free of <a href="https://		twitter.com/hashtag/nukes?src=hash">#nukes</a></p>&mdash; Ploughshares Fund (@plough_shares) <a href="https://twitter.com/plough_shares/		status/627105331450130438">July 31, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+		<div class="against">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Barry Blechman: Smart 21st century strategy-invest in weapons we actually use, 		spend less on costly nuclear weapons we don’t use <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&mdash; Stimson BFAD 		(@StimsonBFAD) <a href="https://twitter.com/StimsonBFAD/status/627163879202754560">July 31, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+		<div class="against">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr">Current <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a> 		are unaffordable &amp; excessive. What we need are sensible <a href="https://twitter.com/hashtag/nuke?src=hash">#nuke</a> reductions, not a new 		arms race.</p>&mdash; Philip Yun (@PhilipYun_PF) <a href="https://twitter.com/PhilipYun_PF/status/627169014926544897">July 31, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="pro">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr">Nuclear weapons are becoming more, not less, important. America cannot afford 		not to modernize its nuclear arsenal <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&mdash; Matthew Kroenig (@kroenig) <a href="https://twitter.com/kroenig/status/627201300833378304">July 31, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="pro">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">US shld modern nuke arsenal &amp; build in more discrim&amp;flex&amp;control ilo 		tougher geopolit&amp;mil-tech environs <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a> <a href="http://t.co/8EattyoyzF">		http://t.co/8EattyoyzF</a></p>&mdash; Elbridge Colby (@ElbridgeColby) <a href="https://twitter.com/ElbridgeColby/status/627485872405872640">August 		1, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="against">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Why are we wasting billions on nukes we don&#39;t need? Time to update US <a <href>		</href>="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a>. <a href="http://t.co/jcBKn9VM56">http://t.co/jcBKn9VM56</a></p>&mdash; Tom Z. 		Collina (@TomCollina) <a href="https://twitter.com/TomCollina/status/628252655106691072">August 3, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="against">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr">US <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a> 		exceed what needed for deterrence, likely unexecutable, pose big opportunity costs. Cheaper options to sustain arsenal exist.</p>&mdash; Kingston 		Reif (@KingstonAReif) <a href="https://twitter.com/KingstonAReif/status/626856744120123392">July 30, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="against">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/Nukeplans?src=hash">#Nukeplans</a> Nukes r 		weapon of peace but their use is so devastating that state of war w/o nukes is preferable than state of peace with nukes!</p>&mdash; Shams uz zaman 		(@shamsZaman_72) <a href="https://twitter.com/shamsZaman_72/status/629308956301627392">August 6, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+		<div class="pro">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/Nukeplans?src=hash">#Nukeplans</a> 		Unilateral nuclear disarmament is unthinkable. The only way forward towards disarmament is if P-5 states take the initiative 1st!</p>&mdash; Shams 		uz zaman (@shamsZaman_72) <a href="https://twitter.com/shamsZaman_72/status/629309937714225152">August 6, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="against">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr">It is especially important to resist impulse to increase the role of nuclear 		weapons when conventional military tensions rise <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&mdash; Tong Zhao 		(@zhaot2005) <a href="https://twitter.com/zhaot2005/status/629430006519705601">August 6, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="pro">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr">Threat landscape is more complex &amp; uncertain than any time in last 50 yrs. 		Nuke modernization is vital but must be cost-effective <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&mdash; Amy 		Zegart (@AmyZegart) <a href="https://twitter.com/AmyZegart/status/631115424902479872">August 11, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="against">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a> for 		modernizing make no sense. The future is smaller, smarter weapons. Why modernize dangerous technology that&#39;s hardly useful?</p>&mdash; Ward 		Wilson (@WardHayesWilson) <a href="https://twitter.com/WardHayesWilson/status/631459822966337537">August 12, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="pro">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr">Modernization should be strictly that &amp; focused on what&#39;s central for 		deterrence. No new capabilities, no new arms racing <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&mdash; Christine 		Parthemore (@clparthemore) <a href="https://twitter.com/clparthemore/status/631462319306870784">August 12, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="against">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr">Nukes will either be abolished or used. Punting on multilat disarmamnt (e.g. 		current US <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a>)=moral failure. Time 2 change norm ie Ban</p>&mdash; Tyler <Wigg->		</Wigg->Stevenson (@TylerWS) <a href="https://twitter.com/TylerWS/status/631512147810357248">August 12, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="against">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a> must 		leave sphere of domestic politics.</p>&mdash; Marco Fey (@marco_fey) <a href="https://twitter.com/marco_fey/status/631545436550090753">August 12, 		2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+
+		<div class="against">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr">There&#39;s no question <a href="https://twitter.com/hashtag/nuclear?src=hash">		#nuclear</a> modernization will force defense tradeoffs. U.S. <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a> should be 		linked with deterrence requirements</p>&mdash; NTI (@NTI_WMD) <a href="https://twitter.com/NTI_WMD/status/631549299902578688">August 12, 2015</a></		blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+
+		<div class="against">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr">U.S. can’t fund current $1 trillion <a href="https://twitter.com/hashtag/		nukeplans?src=hash">#nukeplans</a> &amp; ALL conventional priorities. Step one is to define a <a href="https://twitter.com/hashtag/nuclear?src=hash"		>#nuclear</a> strategy for coming decades</p>&mdash; NTI (@NTI_WMD) <a href="https://twitter.com/NTI_WMD/status/631549324271480832">August 12, <2015>		</2015></a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+		
+		<div class="other">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr">US <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a> to 		modernize arsenal could also fuel <a href="https://twitter.com/hashtag/nuclear?src=hash">#nuclear</a> proliferation. Need to balance security 		requirements w/ proliferation risks</p>&mdash; NTI (@NTI_WMD) <a href="https://twitter.com/NTI_WMD/status/631557623972777984">August 12, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+
+		<div class="pro">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr">U.S. <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a> 		must include Science-Based Stockpile Stewardship as a credible means of ensuring nuclear deterrence <a href="http://t.co/wWjYjEFejK">http://t.co/		wWjYjEFejK</a></p>&mdash; Charles McMillan (@cfmcmillan) <a href="https://twitter.com/cfmcmillan/status/631929186207301632">August 13, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="other">
+		<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">For a safe arsenal, Life Extension Programs should modify only non-nuclear 		parts, such as limited-life components. <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&mdash; Alicia Dressman 		(@thedelphivision) <a href="https://twitter.com/thedelphivision/status/632726540938141696">August 16, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+		
+		<div class="other">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr">For a secure arsenal, LEPs should prioritize insensitive high explosives and 		keep silo-based ICBMs de-MIRVed (phase out the W78). <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&mdash; Alicia 		Dressman (@thedelphivision) <a href="https://twitter.com/thedelphivision/status/632727059081531392">August 16, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+		
+		<div class="other">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr">For an effective arsenal, physics package should not diverge from the tested 		pedigree. Combined pit design is counterintuitive. <a href="https://twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&mdash; Alicia 		Dressman (@thedelphivision) <a href="https://twitter.com/thedelphivision/status/632727311905755136">August 16, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		
+		<div class="other">
+		<blockquote class="twitter-tweet " lang="en"><p lang="en" dir="ltr">Useful/rigorous new <a href="https://twitter.com/CSBA_">@CSBA_</a> rpt on US 		nuke weapon costs. But budget/executability problem real not imagined <a href="http://t.co/crs4fjvxDH">http://t.co/crs4fjvxDH</a> <a href="https://		twitter.com/hashtag/nukeplans?src=hash">#nukeplans</a></p>&mdash; Kingston Reif (@KingstonAReif) <a href="https://twitter.com/KingstonAReif/		status/633027204692246528">August 16, 2015</a></blockquote>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+	</div>
+
+</body>
+</html>
